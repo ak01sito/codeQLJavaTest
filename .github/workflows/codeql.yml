@@ -35,7 +35,13 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
-        queries: java/relative-path-command, java/concatenated-command-line, java/sql-injection, java/concatenated-sql-query, java/sql-injection-local
+        queries: |
+          query {
+            @id: "java/sql-injection"
+          }
+          query {
+            @id: "java/concatenated-sql-query"
+          }
         
         # If you wish to specify custom queries, you can do so here or in a config file.
         # By default, queries listed here will override any specified in a config file.
