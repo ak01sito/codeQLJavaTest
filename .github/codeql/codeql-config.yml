@@ -1,4 +1,4 @@
 name: "Custom Java CodeQL Config"
     
-    queries:
-    - uses: security-and-quality
+queries:
+- uses: security-and-quality
